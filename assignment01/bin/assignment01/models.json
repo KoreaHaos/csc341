@@ -1,0 +1,16 @@
+{
+  "models": [
+    {
+      "name": "Chevy-Malibu",
+      "description": "..."
+    },
+    {
+      "name": "Toyota-Camry",
+      "description": "..."
+    },
+    {
+      "name": "Ford-Fusion",
+      "description": "..."
+    }
+  ]
+}
