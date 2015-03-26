@@ -61,7 +61,7 @@ public class Listener {
 		
 		// verify number is within the DB
 		if (voicemail.Verify(number)) {
-			voicemail.
+//			voicemail.
 			
 			// Display greeting message
 			// Split text after greeting message with line break

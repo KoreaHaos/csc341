@@ -47,7 +47,6 @@ public class Listener {
 		if (number.length() == 11) {
 			_ui.updateTextArea("Dialing " + text.split(" ")[0]);
 			if (text.split(" ")[1].equalsIgnoreCase("Dialing...")) {
-				_ui.updateTextArea(number+ " sworking");
 //				call(number);
 			}
 		}

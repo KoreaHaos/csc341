@@ -14,7 +14,7 @@ public class API {
 	private boolean _authorized = false;
 	private JsonObject DB;
 	private JsonObject user;	// user for current session
-	private String DBPath = "../Voicemail-DB.json";
+	private String DBPath = "/Users/henrysnopek/school/csc341/assignments/assignment07/src/voicemail/Voicemail-DB.json";
 	
 	public API() {
 		_loadDB();

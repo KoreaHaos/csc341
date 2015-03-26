@@ -1,12 +1,12 @@
 package phone;
 
-import javax.swing.SwingUtilities;
+import java.awt.EventQueue;
 
 public class Main {
 	private static String ownerNumber = "12345678901";
 	
 	public static void main(String[] args) {
-		SwingUtilities.invokeLater(new Runnable() {
+		EventQueue.invokeLater(new Runnable() {
 	         @Override
 	         public void run() {
 	        	 UI ui = new UI();
@@ -16,6 +16,8 @@ public class Main {
 	     		listen.forDial();
 	         }
 	     });
+		
+		
 	}
 	 
 }

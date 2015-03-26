@@ -1,6 +1,6 @@
 package phone;
 
-import javax.swing.SwingUtilities;
+import java.awt.EventQueue;
 
 public class Main {
 	private static String ownerNumber = "12345678901";
