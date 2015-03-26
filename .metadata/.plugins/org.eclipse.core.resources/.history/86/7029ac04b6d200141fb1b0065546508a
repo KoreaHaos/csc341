@@ -1,0 +1,8 @@
+package phone;
+
+// UI
+// Renders all the UI
+
+public class UI {
+
+}

@@ -1,0 +1,54 @@
+package voicemail;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+
+public class API {
+	private boolean _authorized = false;
+	JsonObject DB;
+	
+	public boolean Auth(double number, int code) {
+		JsonObject user;
+		// find user via number
+		user = DB.get(Sring.valueOf(number));
+		
+		// check code from user
+		
+		if (user.get("code").getAsInt() == code) _authorized = true;
+		
+		return _authorized = false;
+	}
+	
+	public String Add(User user) {
+		if (!_CheckAuth()) return null;
+		
+		
+		return "";
+	}
+	
+	public String GetAll() {
+		
+		return null;
+	}
+	
+	private boolean _CheckAuth() {
+		if (_authorized) return true;
+		else return false;
+	}
+	
+	private void _loadDb() {
+		String path = "/Users/henrysnopek/school/csc341/assignments/assignment07/src/voicemail/Voicemail-DB.json";
+	}
+}
+
+interface User {
+	double number = 00000000000;
+	int code = 0000;
+	Voicemail[] voicemails = {};
+}
+
+interface Voicemail {
+	double number = 00000000000;
+	String message = "";
+	boolean read = false;
+}

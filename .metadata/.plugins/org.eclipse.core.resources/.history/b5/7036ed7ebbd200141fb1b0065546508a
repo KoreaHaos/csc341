@@ -1,0 +1,50 @@
+package phone;
+
+import java.awt.*;
+import javax.swing.*;
+
+// UI
+// Renders all the UI: window, panels, buttons
+
+public class UI extends JFrame {
+	
+	public UI() {
+		_InitUI();
+	}
+	
+	// Initiates UI
+	private void _InitUI() {
+		setTitle("Cool Phone");
+        setSize(350, 600);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setResizable(false);
+        setVisible(true);
+        
+        JPanel panel = new JPanel();
+        
+        panel.setLayout(new GridLayout(2, 1));
+        panel.add(_Dialog());
+        panel.add(_KeyPad());
+        
+
+	}
+	
+	// Dialog Panel
+	private JPanel _Dialog() {
+		JPanel dialog = new JPanel();
+		
+		dialog.setBackground(new Color(0x00FF00FF));
+		
+		return dialog;
+	}
+	
+	// KeyPad Panel
+	private JPanel _KeyPad() {
+		JPanel keypad = new JPanel(new BorderLayout());
+		
+		keypad.setBackground(new Color(0x00000000));
+		
+		return keypad;
+	}
+}

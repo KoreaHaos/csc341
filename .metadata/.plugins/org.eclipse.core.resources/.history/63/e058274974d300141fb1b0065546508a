@@ -1,0 +1,9 @@
+package phone;
+
+public class Listener {
+	private UI _ui;
+	
+	public Listener(UI ui) {
+		_ui = ui;
+	}
+}

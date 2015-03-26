@@ -1,0 +1,11 @@
+package assignment04;
+
+// holds customer data for seat
+public interface Customer {
+	public String 	fName = "";
+	public String 	lName = "";
+	public String 	mName = "";
+	public int		age = 0;
+	public String 	address = "";
+	public double	phone = 000000000;
+}

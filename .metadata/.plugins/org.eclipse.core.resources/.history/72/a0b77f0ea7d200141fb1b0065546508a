@@ -1,0 +1,68 @@
+package voicemail;
+
+import org.json.simple.JSONArray;
+import org.json.simple.parser.JSONParser;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.stream.JsonReader;
+
+public class API {
+	private boolean _authorized = false;
+	JsonObject DB;
+	JsonObject user;
+	
+	// Authorize Voicemail API Usage
+	public boolean Auth(double number, int code) {
+		user = DB.get(String.valueOf(number)).getAsJsonObject();
+		
+		if (user.get("code").getAsInt() == code) _authorized = true;
+		
+		return _authorized = false;
+	}
+	
+	// Add voicemail to user
+	public String Add(User user) {
+		
+		
+		return "";
+	}
+	
+	public String GetAll() {
+		
+		return null;
+	}
+	
+	private void _loadDb() {
+		String dBPath = "/Users/henrysnopek/school/csc341/assignments/assignment07/src/voicemail/Voicemail-DB.json";
+
+		JsonReader reader = new JsonReader(new FileReader(dBPath));
+		
+		try {
+			// load file
+			Object obj = parser.parse(new FileReader(modelsFile));
+			
+			// grab models array
+			modelsArray = (JSONArray) modelsObj.get("models");
+	
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+interface User {
+	double number = 00000000000;
+	int code = 0000;
+	Voicemail[] voicemails = {};
+}
+
+interface Voicemail {
+	double number = 00000000000;
+	String message = "";
+	boolean read = false;
+}

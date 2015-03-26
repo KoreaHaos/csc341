@@ -1,0 +1,33 @@
+package voicemail;
+
+public class API {
+	private boolean _authorized = false;
+	
+	public boolean Auth(double number, int code) {
+		
+		
+		return _authorized;
+	}
+	
+	public String Add(User user) {
+		
+		return null;
+	}
+	
+	public String GetAll() {
+		
+		return null;
+	}
+}
+
+interface User {
+	double number = 00000000000;
+	int code = 0000;
+	Voicemail[] voicemails = {};
+}
+
+interface Voicemail {
+	double number = 00000000000;
+	String message = "";
+	boolean read = false;
+}

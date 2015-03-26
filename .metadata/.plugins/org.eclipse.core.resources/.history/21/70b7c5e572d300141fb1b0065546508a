@@ -1,0 +1,14 @@
+package phone;
+
+public class Main {
+	private String ownerNumber = "12345678901";
+	
+	public static void main(String[] args) {
+		Listener listen = new Listener();
+		
+		UI ui = new UI();
+		
+		listen.forLogin();
+		listen.forDial();
+	}
+}

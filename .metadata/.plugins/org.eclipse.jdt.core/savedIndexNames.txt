@@ -1,0 +1,10 @@
+INDEX VERSION 1.127+/Users/henrysnopek/school/csc341/assignments/.metadata/.plugins/org.eclipse.jdt.core
+2927339593.index
+1081461093.index
+2007090441.index
+3648821471.index
+807353834.index
+3854359212.index
+2827236231.index
+2198791064.index
+2836819024.index

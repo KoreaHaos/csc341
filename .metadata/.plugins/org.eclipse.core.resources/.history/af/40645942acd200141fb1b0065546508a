@@ -1,0 +1,119 @@
+package voicemail;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import com.google.gson.*;
+
+
+// API
+// This API allows you to access the Voicemail DB after authorization.
+
+// NOTES:
+// If you notice the methods Add & Remove are currently private. Considering
+// these are out of scope for this assignment the scaffolding will be left in,
+// but incomplete.
+
+public class API {
+	private boolean _authorized = false;
+	private JsonObject DB;
+	private JsonObject user;
+	private String DBPath = "/Users/henrysnopek/school/csc341/assignments/assignment07/src/voicemail/Voicemail-DB.json";
+	
+	public API() {
+		_loadDB();
+	}
+	
+	// Authorize Voicemail API Usage
+	public boolean Auth(double number, int code) {
+		// Load user from matching number
+		user = DB.get(String.valueOf(number)).getAsJsonObject();
+		
+		// If user number is equal to code set _authorized to true
+		if (user.get("code").getAsInt() == code) _authorized = true;
+		
+		return _authorized;
+	}
+	
+	// Add User to DB
+	// Change this to public to allow access to adding new users to the DB.
+	private boolean Add(User user) {
+		if (!_authorized) return false;
+		
+		return true;
+	}
+	
+	// Add voicemail to user
+	public boolean Add(User user, Voicemail voicemail) {
+		if (!_authorized) return false;
+		
+		return true;
+	}
+	
+	// Add User to DB
+	// Change this to public to allow access to adding new users to the DB.
+	private boolean Remove(User user) {
+		if (!_authorized) return false;
+		
+		return true;
+	}
+	
+	public boolean Remove(User user, Voicemail voicemail) {
+		if (!_authorized) return false;
+		
+		return true;
+	}
+	
+	public JsonArray GetAll(User user) {
+		if (!_authorized) return null;
+		
+		return "";
+	}
+	
+	private void _loadDB() {
+		String DBPath = "/Users/henrysnopek/school/csc341/assignments/assignment07/src/voicemail/Voicemail-DB.json";
+		
+		try {
+			
+			JsonParser parser = new JsonParser();
+			JsonElement jsonElement = parser.parse(new FileReader(DBPath));
+			DB = jsonElement.getAsJsonObject();
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return;
+	}
+	
+	public boolean SaveSession() {
+		
+		try {
+			//write converted json data to a file named "file.json"
+			FileWriter writer = new FileWriter(DBPath);
+			writer.write(DB);
+			writer.close();
+	 
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return true;
+	}
+}
+
+interface User {
+	public double number = 00000000000;
+	public int password = 0000;
+	public JsonArray voicemails = new JsonArray();
+}
+
+interface Voicemail {
+	public double number = 00000000000;
+	public String message = "";
+	public boolean read = false;
+}

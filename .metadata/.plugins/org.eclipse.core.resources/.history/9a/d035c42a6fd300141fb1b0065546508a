@@ -1,0 +1,10 @@
+package phone;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		new UI();
+		
+		int db = 12345678901; 
+	}
+}

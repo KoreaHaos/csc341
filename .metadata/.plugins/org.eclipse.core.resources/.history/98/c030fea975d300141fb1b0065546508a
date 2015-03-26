@@ -1,0 +1,42 @@
+package phone;
+
+public class Listener {
+	private UI _ui;
+	private String _num;
+	
+	public Listener(UI ui, String num) {
+		_ui = ui;
+		_num = num;
+	}
+	
+	// Login
+	public void forLogin() {
+		
+	}
+	
+	// Dial number
+	public void forDial() {
+		ui.getTextArea();
+		
+		textField.getDocument().addDocumentListener(new DocumentListener() {
+			  public void changedUpdate(DocumentEvent e) {
+			    warn();
+			  }
+			  public void removeUpdate(DocumentEvent e) {
+			    warn();
+			  }
+			  public void insertUpdate(DocumentEvent e) {
+			    warn();
+			  }
+		
+		if (_num.equals()) {
+			
+		}
+	}
+	
+	// Leave Voicemail
+	private void leaveVoicemail() {
+		
+	}
+	
+}

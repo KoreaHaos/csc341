@@ -1,0 +1,9 @@
+package assignment04;
+
+// Seat holds the position, type, and location
+public interface Seat {
+	public String 	position = "";					// Business or Economy
+	public String 	type = ""; 						// Window or Aisle
+	public String 	location =""; 					// Alpha-numeric location of the seat: E3
+	public Customer customerData = new Customer(){};// Holds customer object, for data
+}

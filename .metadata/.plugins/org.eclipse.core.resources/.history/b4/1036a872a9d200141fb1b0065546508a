@@ -1,0 +1,58 @@
+package voicemail;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import com.google.gson.*;
+
+public class API {
+	private boolean _authorized = false;
+	JsonObject DB;
+	JsonObject user;
+	
+	public API() {
+		_loadDB();
+	}
+	
+	// Authorize Voicemail API Usage
+	public boolean Auth(double number, int code) {
+		user = DB.get(String.valueOf(number)).getAsJsonObject();
+		
+		if (user.get("code").getAsInt() == code) _authorized = true;
+		
+		return _authorized;
+	}
+	
+	// Add voicemail to user
+	public String Add(Voicemail voicemail) {
+		if (!_authorized) return null;
+		
+		return "";
+	}
+	
+	public void Remove()
+	
+	public String GetAll() {
+		if (!_authorized) return null;
+		
+		return "";
+	}
+	
+	private void _loadDB() {
+		String DBPath = "/Users/henrysnopek/school/csc341/assignments/assignment07/src/voicemail/Voicemail-DB.json";
+		
+		try {
+			
+			JsonParser parser = new JsonParser();
+			JsonElement jsonElement = parser.parse(new FileReader(DBPath));
+			DB = jsonElement.getAsJsonObject();
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return;
+	}
+}

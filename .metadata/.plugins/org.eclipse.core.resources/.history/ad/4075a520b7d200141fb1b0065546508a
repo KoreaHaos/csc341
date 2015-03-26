@@ -1,0 +1,28 @@
+package phone;
+
+import java.awt.*;
+
+import javax.swing.*;
+
+
+// UI
+// Renders all the UI: window, panels, buttons
+
+public class UI extends JFrame {
+	
+	public UI() {
+		_initUI();
+	}
+	
+	private void _initUI() {
+		setTitle("Phone");
+        setSize(300, 200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String[] args) {
+		UI ui = new UI();
+		ui.setVisible(true);
+	}
+}

@@ -1,0 +1,36 @@
+  {
+    "users": {
+      "12345678901": {
+        "greetingMsg": "Hey, I'm not here right now. Please leave a message or call me at a different time.",
+        "password": "2580",
+        "voicemails": [
+          {
+            "number": "12625554321",
+            "message": "Hey! How are you doing? Did you get my message?",
+            "read": false
+          },
+          {
+            "number": "19205551234",
+            "message": "Hey! Where are you? Did you get my message?",
+            "read": false
+          }
+        ]
+      },
+      "12345676543": {
+        "greetingMsg": "Hey, I'm not here right now or ever. Please leave a message or call me at a different time. ;)",
+        "password": "2580",
+        "voicemails": [
+          {
+            "number": "12625554321",
+            "message": "Hey! How are you doing? Did you get my message?",
+            "read": false
+          },
+          {
+            "number": "19205551234",
+            "message": "Hey! Dude, Did you get my message?",
+            "read": false
+          }
+        ]
+      }
+    }
+  }

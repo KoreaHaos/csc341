@@ -1,0 +1,13 @@
+package listener;
+
+public class Listener {
+	
+	
+	public Listener(UI ui) {
+		
+	}
+	
+	public forLogin() {
+		
+	}
+}

@@ -1,0 +1,20 @@
+package phone;
+
+public class Listener {
+	private UI _ui;
+	
+	public Listener(UI ui) {
+		_ui = ui;
+	}
+	
+	// Login
+	public void forLogin() {
+		
+	}
+	
+	// Dial number to leave voicemail
+	public void forDial() {
+		
+	}
+	
+}

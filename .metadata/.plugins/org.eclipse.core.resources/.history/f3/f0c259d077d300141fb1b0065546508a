@@ -1,0 +1,56 @@
+package phone;
+
+import javax.swing.JTextArea;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+
+public class Listener {
+	private UI _ui;
+	private String _num;
+	private String text = "";
+	private JTextArea textArea = _ui.getTextArea();
+	
+	public Listener(UI ui, String num) {
+		_ui = ui;
+		_num = num;
+	}
+	
+	// Login
+	public void forLogin() {
+		
+	}
+	
+	// Dial number
+	public void forDial() {
+		
+		
+		
+		textArea.getDocument().addDocumentListener(
+			new DocumentListener() {
+				
+				@Override
+				public void insertUpdate(DocumentEvent e) {
+					detectNumber();
+				}
+
+				@Override
+				public void removeUpdate(DocumentEvent e) {  }
+
+				@Override
+				public void changedUpdate(DocumentEvent e) {  }
+			 }
+		);
+		
+		if (_num.equals()) {
+			
+		}
+	}
+	
+	private void detectNumber()
+	
+	// Leave Voicemail
+	private void leaveVoicemail() {
+		
+	}
+	
+}

@@ -1,0 +1,7 @@
+package voicemail;
+
+public interface Voicemail {
+	public String number = "00000000000";
+	public String message = "";
+	public boolean read = false;
+}

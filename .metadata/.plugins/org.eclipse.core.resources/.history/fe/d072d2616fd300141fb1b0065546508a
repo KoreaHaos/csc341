@@ -1,0 +1,16 @@
+package phone;
+
+public class Main {
+	private long ownerNumber = 12345678901L;
+	
+	
+	public static void main(String[] args) {
+		new UI(); 
+	}
+	
+	public long getOwnerNumber() {
+		
+	}
+	
+	public long setOwnerNumber(long num)
+}

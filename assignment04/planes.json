@@ -1,0 +1,86 @@
+[
+  {
+    "flight-number": "123ABC",
+    "travel-date": {
+      "departure": {
+        "date": "12/15/2015",
+        "time": "12:30PM",
+        "airport": "MKE"
+      },
+      "arrival": {
+        "date": "12/15/2015",
+        "time": "2:30PM",
+        "airport": "LGA"
+      }
+    },
+    "seats": {
+      "aisles": 1,
+      "columns-left": 1,
+      "colums-right": 1,
+      "business": 4,
+      "economy": 8,
+      "seat-data": {
+        "1": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "2": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "3": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "4": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "5": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "6": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "7": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "8": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "9": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "10": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "11": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        },
+        "12": {
+          "customer": {
+            "name": "Henry Snopek"
+          }
+        }
+      }
+    }
+  }
+]
