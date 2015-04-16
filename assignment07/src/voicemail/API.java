@@ -89,12 +89,27 @@ public class API {
 		// Find _user with provided number
 		for (int i = 0; i < _users.size(); i++) {
 			_user = _users.get(i).getAsJsonObject();
-			if (_user.get("number").getAsString() == num) break;
+			if (_user.getAsString() == num) break;
 			else _user = null;
 		}
 		
 		if (_user == null) return false;
 		return true;
+	}
+	
+	public void Login(String num) {
+		JsonArray _users = DB.get("users").getAsJsonArray();
+		JsonObject _user = new JsonObject();
+		
+		for (int i = 0; i < _users.size(); i++) {
+			_user = _users.get(i).getAsJsonObject();
+			if (_user.getAsString() == num) break;
+			else _user = null;
+		}
+		
+		if (_user.get("password").getAsString().equalsIgnoreCase(num)) {
+			_authorized = true;
+		}
 	}
 	
 	// Loads DB

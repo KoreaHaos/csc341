@@ -12,6 +12,7 @@ public class Listener {
 	private String _ownerNum;
 	private String text = "";
 	private JTextArea textArea;
+	private API voicemail = new API();
 	
 	public Listener(UI ui, String num) {
 		_ui = ui;
@@ -44,28 +45,32 @@ public class Listener {
 		text = textArea.getText();
 		String number = text.split(" ")[0];
 		
-		if (number.length() == 11) {
-			_ui.updateTextArea("Dialing " + text.split(" ")[0]);
-			if (text.split(" ")[1].equalsIgnoreCase("Dialing...")) {
-				_ui.updateTextArea(number+ " sworking");
-//				call(number);
+		if (text.split(" ")[1].equalsIgnoreCase("Dialing...")) {
+			switch(number.length()) {
+				case 4:
+					voicemail.Login(number);
+				case 7:
+					call(number);
 			}
 		}
 
 	}
 	
 	private void call(String number) {
-		API voicemail = new API();
+		
 		
 		String _msg = "";
 		
 		// verify number is within the DB
-		if (voicemail.Verify(number)) {
-			voicemail.
-			
+		if (voicemail.Search(number)) {
 			// Display greeting message
-			// Split text after greeting message with line break
+			String greeting = voicemail.GetGreeting(number);
+			_ui.updateTextArea(greeting);
+			// listen for pound button to be hitx
+			
+
 			// after pound key is hit save the message in new Voicemail Object
+			textArea.split(" ")[1]
 		}
 			
 		

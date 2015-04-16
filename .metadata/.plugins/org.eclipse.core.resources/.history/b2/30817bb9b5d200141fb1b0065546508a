@@ -1,5 +1,0 @@
-package voicemail;
-
-public interface Voicemail {
-
-}

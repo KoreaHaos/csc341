@@ -1,7 +1,0 @@
-package voicemail;
-
-public interface voicemail {
-	public double number = 00000000000;
-	public String message = "";
-	public boolean read = false;
-}
