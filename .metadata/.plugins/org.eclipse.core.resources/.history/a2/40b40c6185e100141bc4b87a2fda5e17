@@ -1,0 +1,26 @@
+package assignment09;
+
+abstract class ClientCreditState {
+	protected CCState creditState;
+	public CCState getStateConstant() { return creditState; }
+	public void setStateConstant(CCState creditState) { this.creditState = creditState; }
+	public abstract void transition(Client client);
+}
+
+class PendingCredit extends ClientCreditState {
+	public void PendingState() { this.creditState = CCState.Pending; }
+	
+	@Override
+	public void transition(Client client) {
+		
+	}
+}
+
+class ApprovedCredit extends ClientCreditState {
+	public void ApprovedCredt() { this.creditState = CCState.Approved; }
+
+	@Override
+	public void transition(Client client) {
+		 throw new UnsupportedOperationException();
+	}
+}

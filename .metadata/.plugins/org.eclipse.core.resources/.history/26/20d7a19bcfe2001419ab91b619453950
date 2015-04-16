@@ -1,0 +1,16 @@
+package assignment09;
+
+import java.util.Queue;
+
+public class Orders {
+	private Queue<Order> PendingOrders;
+	private Queue<Order> ApprovedOrders;
+	
+	public void add(Order order) {
+		if (order.getClient() == Pending) {
+			PendingOrders.add(order);
+		} else {
+			ApprovedOrders.add(order);
+		}
+	}
+}

@@ -1,0 +1,6 @@
+package assignment09;
+
+public interface Customer {
+	public String getName();
+	public String getCredit();
+}

@@ -1,0 +1,5 @@
+package assignment09;
+
+abstract class ClientCreditState {
+	protected CCState credit;
+}

@@ -1,0 +1,27 @@
+package assignment09;
+
+public class Order {
+	private Client client;
+	private Item[] items;
+	private ClientCreditState creditState;
+	public Client getClient() {
+		return client;
+	}
+	public void setClient(Client client) {
+		this.client = client;
+	}
+	public Item[] getItems() {
+		return items;
+	}
+	public void setItems(Item[] items) {
+		this.items = items;
+	}
+	public ClientCreditState getCreditState() {
+		return creditState;
+	}
+	public void setCreditState(ClientCreditState creditState) {
+		this.creditState = creditState;
+	}
+	
+	
+}

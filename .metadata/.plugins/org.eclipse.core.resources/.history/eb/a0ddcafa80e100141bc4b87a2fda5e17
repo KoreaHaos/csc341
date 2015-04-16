@@ -1,0 +1,8 @@
+package assignment09;
+
+abstract class ClientCreditState {
+	protected CCState credit;
+	public CCState getStateConstant() { return credit; }
+	public abstract void setStateConstant(CCState credit) { this.credit = credit; }
+	public abstract void transition() {  }
+}

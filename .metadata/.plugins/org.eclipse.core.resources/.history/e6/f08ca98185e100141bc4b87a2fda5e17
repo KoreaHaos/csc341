@@ -1,0 +1,9 @@
+package assignment09;
+
+abstract class Client {
+	protected ClientCreditState credit;
+	
+	public String getName();
+	public String getCredit();
+	public String setApproval();
+}

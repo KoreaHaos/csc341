@@ -1,0 +1,29 @@
+package assignment09;
+
+class Client {
+	protected ClientCreditState credit;
+	
+	public String getName() {
+		return null;
+	}
+	
+	public String getCredit() {
+		return null;
+	}
+	
+	public String setApproval() { 
+		return null;
+	}
+	
+	public void setState(PendingCredit pendingCredit) {
+		
+	}
+	
+	public void setState(ApprovedCredit approvedCredit) {
+		
+	}
+	
+	public void setStateConstant(CCState approved) {
+		
+	}
+}

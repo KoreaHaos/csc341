@@ -1,0 +1,34 @@
+package assignment09;
+
+public class Client {
+	protected ClientCreditState credit;
+	private String name;
+	
+	public Client(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getCredit() {
+		return credit.toString();
+	}
+	
+	public String setApproval() { 
+		return null;
+	}
+	
+	public void setState(PendingCredit pendingCredit) {
+		this.credit = pendingCredit;
+	}
+	
+	public void setState(ApprovedCredit approvedCredit) {
+		this.credit = approvedCredit;
+	}
+	
+	public void setStateConstant(CCState state) {
+		this.
+	}
+}

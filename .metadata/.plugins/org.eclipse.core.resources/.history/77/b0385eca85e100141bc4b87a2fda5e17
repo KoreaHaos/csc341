@@ -1,0 +1,27 @@
+package assignment09;
+
+abstract class Client {
+	protected ClientCreditState credit;
+	
+	public String getName() {
+		return null;
+	};
+	
+	public String getCredit() {
+		return null;
+	};
+	
+	public String setApproval() { 
+		return null;
+	};
+	
+	public void setState(ApprovedCredit approvedCredit) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void setStateConstant(CCState approved) {
+		// TODO Auto-generated method stub
+		
+	}
+}

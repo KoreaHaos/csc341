@@ -1,0 +1,21 @@
+package assignment09;
+
+abstract class ClientCreditState {
+	protected CCState creditState;
+	public CCState getStateConstant() { return creditState; }
+	public void setStateConstant(CCState credit) { this.creditState = creditState; }
+	public abstract void transition();
+}
+
+class PendingCredit extends ClientCreditState {
+	public void PendingState() { this.creditState = CCState.Pending; }
+	
+	@Override
+	public void transition() {
+		
+	}
+}
+
+class ApprovedCredit extends ClientCreditState {
+	pulbic void ApprovedCredt() { this.creditState = CCState.Approved; }
+}
